@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    margin: 10px;
+    padding: 1.5rem;
+}
+
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+
+}
+
+/*. nav-logo {
+    flex: 2;
+} */
+
+.navbar a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    align-self: flex-end;
+}
+
+
+
+
+/* Background images */
+
+/* .slide:first-child {
+    background: url('img/beautiful-elderly-happiness-2050975.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(2) {
+    background: url('img/animal-animal-photography-blur-460775.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(3) {
+    background: url('img/baby-belly-blonde-160776.jpg') no-repeat center center/cover;
+}
+
+
+.slide:nth-child(4) {
+    background: url('img/arch-bridge-clouds-814499.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(5) {
+    background: url('img/apple-blur-branch-257840.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(6) {
+    background: url('img/action-adult-adventure-1122868.jpg') no-repeat center center/cover;
+} */
