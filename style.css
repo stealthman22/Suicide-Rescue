@@ -1,9 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
 }
 
+html body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Flexbox Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -19,10 +25,6 @@
 
 }
 
-/*. nav-logo {
-    flex: 2;
-} */
-
 .navbar a {
     text-decoration: none;
     width: 100%;
@@ -31,12 +33,96 @@
     align-self: flex-end;
 }
 
+/* Slides container */
+.slider {
+    position: relative;
+    /* The container should be relative, but items to be moved will be absolute */
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+
+}
+
+/* individual slides */
+.slide {
+    position: absolute;
+    top: 0;
+    /* top and left work with positioning */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* this will make the div's invisible, and the transition allows them pass in an animated manner */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.current {
+    opacity: 1;
+}
+
+/* .slide is added just for semantics */
+
+.slide .content {
+
+    position: absolute;
+    bottom: 70px;
+    left: -600px;
+    width: 600px;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 1rem;
+}
+
+.slide.current .content {
+    opacity: 1;
+    transform: translateX(600px);
+    /* selected properties,timing, funtion, delay*/
+    transition: all 0.7s ease-in-out 0.3s;
+
+}
+
+.btn {
+    position: absolute;
+    width: 100%;
+    top: 70%;
+}
+
+.btn button#next {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+
+.btn button#prev {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+
+.btn button {
+
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 20px 20px;
+    border-radius: 50%;
+    /* Removes the outline around an element */
+    outline: none;
+}
+
+.btn button:hover {
+    background-color: #fff;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+}
 
 
 
 /* Background images */
 
-/* .slide:first-child {
+.slide:first-child {
     background: url('img/beautiful-elderly-happiness-2050975.jpg') no-repeat center center/cover;
 }
 
@@ -59,4 +145,4 @@
 
 .slide:nth-child(6) {
     background: url('img/action-adult-adventure-1122868.jpg') no-repeat center center/cover;
-} */
+}
